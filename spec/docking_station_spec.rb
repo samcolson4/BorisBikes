@@ -2,6 +2,7 @@ require 'Docking_Station'
 
 station = DockingStation.new
 bike = Bike.new
+subject = DockingStation.new
 
 
 describe DockingStation do
