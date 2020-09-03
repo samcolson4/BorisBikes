@@ -2,7 +2,7 @@ require 'Docking_Station'
 
 station = DockingStation.new
 bike = Bike.new
-subject = DockingStation.new
+station_no_bike = DockingStation.new
 
 
 describe DockingStation do
@@ -31,7 +31,7 @@ describe DockingStation do
 
     describe '#release_bike' do
      it 'raises an error when there are no bikes available' do
-       expect { subject.release_bike }.to raise_error('No bikes available')
+       expect { station_no_bike.release_bike }.to raise_error('No bikes available')
      end
    end
 end
