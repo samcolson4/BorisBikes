@@ -28,5 +28,11 @@ describe DockingStation do
       station.dock(bike)
       expect(station.bike).to eq bike
     end
-
+  describe 'release bike' do
+    it "raises an error if no bike docked" do
+      station = DockingStation.new
+      expect { station.release_bike }.to raise_error "No bike avail"
+    end
   end
+end
+
