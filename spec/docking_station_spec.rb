@@ -27,17 +27,27 @@ describe DockingStation do
       expect(subject.bike_rack).to eq [bike]
     end
 
-    describe '#release_bike' do
-     it 'raises an error when there are no bikes available' do
-       expect { station_no_bike.release_bike }.to raise_error('No bikes available')
-     end
-    end
-
+=begin
     describe '#dock(bike)' do
-      it 'raises an error when full' do
-        20.times { subject.dock Bike.new}
-       expect { subject.dock Bike.new }.to raise_error('Bike already docked')
-    end 
+      it 'adds a new bike to bike_rack'
+       expect(subject.bike_rack.count).to eq subject.bike_rack.count
+    end
+=end
+
+=begin
+  describe 'full?' do
+    it 'raises an error when full' do
+      20.times { subject.dock Bike.new}
+      expect { subject.full? }.to raise_error('Bike already docked')
+   end
   end
+  
+  describe '#rack_empty?' do
+  it 'raises an error when there are no bikes available' do
+    expect { subject.rack_empty? }.to raise_error('No bikes available')
+  end
+ end
+=end
+
 
 end
