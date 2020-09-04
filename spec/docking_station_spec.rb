@@ -50,4 +50,11 @@ describe DockingStation do
 =end
 
 
+it 'add capacity to new instance' do
+  expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
+end
+
+it 'test for default capacity' do
+  expect(subject.capacity.times{subject.dock Bike.new}).to eq 20
+end
 end
